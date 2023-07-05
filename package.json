@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "@sleepinggautama/whatsapp-web.js": "^1.18.4-hotfix-undefined-legacyphonefeatures-x",
+    "exceljs": "^4.3.0",
+    "nodemailer": "^6.7.7",
+    "press-any-key": "^0.1.1",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.18.4"
+  },
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "electron-packager": "^17.1.1",
+    "nodemon": "^2.0.19"
+  },
+  "name": "y",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon main"
+  },
+  "author": "guilhermeS",
+  "license": "ISC",
+  "keywords": [],
+  "description": ""
+}

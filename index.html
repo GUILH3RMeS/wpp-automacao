@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="interface">
+        <div class="stack" style="--stacks: 3; width: 100%;">
+            <span style="--index: 0;">Automação</span>
+            <span style="--index: 1;">Automação</span>
+            <span style="--index: 2;">Automação</span>
+        </div>
+        <div>
+            <button id="filepath" class="custom-btn btn-4 button">Selecione a pasta</button><br>
+            <label for="filePath" class="label" id="labelfilepath">o caminho dos arquivos que serão lidos</label>
+        </div>
+        <div>
+
+            <textarea name="textAreaTitle" id="titleText" cols="30" rows="10" placeholder="Digite o Titulo do Email a ser enviado" style="height: 91px; width: 330px;"></textarea>
+        </div>
+        <div>
+            <input type="file" name="sheetpath" id="uploadplanilha" hidden="hidden">
+            <button id="sheetpath" class="custom-btn btn-4 button">Selecione a planilha</button><br>
+            <label for="sheetpath" class="label" id="labelsheetpath">A lista daqueles que serão contatados</label>
+        </div>
+        <div>
+            <textarea name="textAreaTitle" id="bodyText" cols="30" rows="10" placeholder="Digite a mensagem a ser enviada para o Email" style="height: 91px; width: 330px;"></textarea>
+        </div>
+        <div>
+            <input type="file" name="copyPath" id="uploadbackup" hidden="hidden">
+            <button id="copypath" class="custom-btn btn-4 button">Selecione o Backup</button><br>
+            <label for="copyPath" class="label" id="labelcopypath">O local onde será salvo a copia de segurança</label>
+        </div>
+        <div>
+            <textarea name="textAreawwp" id="wwpText" cols="30" rows="10" placeholder="Digite a mensagem a ser enviada para o whatsApp" style="height: 91px; width: 330px;"></textarea>
+        </div>
+        <div ><button id="iniciar" class="custom-btn btn-8">Iniciar o programa</button></div>
+    </div>
+    <div id="text-tela"
+        style="display: none;flex-direction: column;align-items: center;width: 99%;justify-content: center;align-content: center;">
+        <div class="stack" style="--stacks: 3;">
+            <span style="--index: 0;">Executando</span>
+            <span style="--index: 1;">Executando</span>
+            <span style="--index: 2;">Executando</span>
+        </div>
+        <div id="painel-texto">
+
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+
+</html>

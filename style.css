@@ -1,0 +1,192 @@
+body {
+  background: #e0e5ec;
+  width: 100%;
+  height: 100%;
+  margin: 0em;
+}
+div#interface{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content:center;
+  align-items: flex-start;
+  width: 98%;
+  height: 100%;
+  margin: 0px;
+}
+#interface div{
+  width: 49%;
+  text-align:center;
+  height: 6rem;
+  margin: 10px 0px;
+}
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  padding: 10px 25px;
+  border: 2px solid #000;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+button {
+  margin: 20px;
+  outline: none;
+}
+.btn-4 {
+  position: relative;
+  color: #000;
+  z-index: 2;
+  line-height: 40px;
+  padding: 0;
+}
+.btn-4:hover{
+  border: none;
+}
+.btn-4:before,
+.btn-4:after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0%;
+  border: 2px solid;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.btn-4:before {
+  top: 0;
+   left: 0;
+   border-bottom-color: transparent;
+   border-right-color: transparent;
+   border-top-color: #000;
+   border-left-color: #000;
+}
+.btn-4:after{
+   bottom: 0;
+   right: 0;
+   border-top-color: transparent;
+   border-left-color: transparent;
+   border-bottom-color: #000;
+   border-right-color: #000;
+}
+.btn-4:hover:before,
+.btn-4:hover:after {
+  border-color: #000;
+  height: 100%;
+  width: 100%;
+}
+.btn-8 {
+  line-height: 40px;
+ padding: 0;
+ background: transparent;
+ position: relative;
+ z-index: 2;
+ color: #fff;
+ -webkit-perspective: 300px;
+ perspective: 300px;
+ -webkit-transform-style: preserve-3d;
+ transform-style: preserve-3d;
+}
+.btn-8:hover{
+ color: #000;
+}
+.btn-8:after {
+ position: absolute;
+ content: "";
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: #000;
+ z-index: -1;
+ -webkit-transform-origin: center bottom;
+ transform-origin: center bottom;
+ -webkit-transform: rotateX(0);
+ transform: rotateX(0);
+ transition: all 0.3s ease;
+}
+.btn-8:hover:after {
+ -webkit-transform: rotateX(-180deg);
+ transform: rotateX(-180deg);
+}
+.button{
+  margin-bottom: 0px;
+}
+.label{
+  margin-top: 4px;
+  font-weight: bold;
+  font-size: 13px;
+  margin-left: 20px;
+}
+.right {
+text-align: right;
+width: 100%;
+}
+
+.stack {
+display: grid;
+grid-template-columns: 1fr;
+margin: 10px 30px;
+}
+
+.stack span {
+font-weight: bold;
+grid-row-start: 1;
+grid-column-start: 1;
+font-size: 3rem;
+--stack-height: calc(100% / var(--stacks) - 1px);
+--inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+--clip-top: calc(var(--stack-height) * var(--index));
+--clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 2s ease infinite 2s alternate-reverse;
+}
+
+.stack span:nth-child(odd) { --glitch-translate: 8px; }
+.stack span:nth-child(even) { --glitch-translate: -8px; }
+
+@keyframes stack {
+0% {
+  opacity: 0;
+  transform: translateX(-50%);
+  text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+};
+60% {
+  opacity: 0.5;
+  transform: translateX(50%);
+}
+80% {
+  transform: none;
+  opacity: 1;
+  text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+}
+100% {
+  text-shadow: none;
+}
+}
+
+@keyframes glitch {
+0% {
+  text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+  transform: translate(var(--glitch-translate));
+}
+2% {
+  text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+}
+4%, 100% {  text-shadow: none; transform: none; }
+}
+
+#interrupcao{
+  display: none;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#textLabel{
+background-color: #e0e5ec;
+}
